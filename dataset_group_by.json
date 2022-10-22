@@ -1,0 +1,11 @@
+{
+    "datasetName": "group_by_data_Morad",
+    "actions": [
+        {
+            "actionName": "onetime_action",
+            "queryAction": {
+                "sqlQuery": "SELECT device_id, avg(temperature) AVG_TEMP, max(temperature) MAX_TEMP, min(temperature) MIN_TEMP, avg(humidity) AVG_HUMIDTY, avg(roll) AVG_ROLL, min(roll) MIN_ROLL, max(roll) MAX_ROLL, avg(pitch) AVG_PITCH, min(pitch) MIN_PITCH, max(pitch) MAX_PITCH FROM etl_archival_store_Morad group by (device_id) order by device_id"
+            }
+        }
+    ]
+}

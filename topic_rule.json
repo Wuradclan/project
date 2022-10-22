@@ -1,0 +1,19 @@
+{
+    "sql": "SELECT * FROM 'dt/Morad/+/aggregate'",
+    "ruleDisabled": false,
+    "awsIotSqlVersion": "2016-03-23",
+    "actions": [
+        {
+            "iotAnalytics": {
+                "channelName": "etl_archive_telemetry_Morad",
+                "roleArn": "arn:aws:iam::059831388641:role/EtlAnalyticsRole"
+            }
+        }
+    ],
+    "errorAction": {
+        "cloudwatchLogs": {
+            "roleArn": "arn:aws:iam::059831388641:role/EtlAnalyticsRole",
+            "logGroupName": "/aws/iot-rules/etl_data"
+        }
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "datasetName": "raw_data_Morad",
+    "actions": [
+        {
+            "actionName": "onetime_action",
+            "queryAction": {
+                "sqlQuery": "select * from etl_archival_store_Morad"
+            }
+        }
+    ]
+}
