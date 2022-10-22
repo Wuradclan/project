@@ -142,7 +142,7 @@ pitch = acc.pitch()
 
 while True:
 	payload=json.dumps({"device_id": device_id,"temperature":  mp.temperature(),"humidity": si.humidity(),"voltage":py.read_battery_voltage(),"roll":acc.roll(), "pitch": acc.pitch(), 
-	"timestamp":getLocalTime()})
+	"timestamp":str(getLocalTime())})
 	print(payload)
 	mytopic = config.TOPIC +'/'+ device_id +'/aggregate'
 	pycomAwsMQTTClient.publish(mytopic, payload, 1)
